@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Hasil Pengajuan</title>
+        
+    </head>
+    <body>
+        <fieldset>
+            <legend>Hasil Pengajuan Pinjaman Lab Mahasiswa</legend>
+            <h3 style="text-align: center;">
+                UPN Veteran Jakarta
+                <img src="https://www.upnvj.ac.id/id/files/thumb/89f8a80e388ced3704b091e21f510755/520" width="50px" height="50px">
+            </h3>
+
+            <p id="nim"></p>
+            <p id="nama"></p>
+            <p id="tahun"></p>
+            <p id="lantai"></p>
+            <p>Lab yang dipilih:</p>
+            <ul id="room"></ul>
+            <br>
+
+        </fieldset>
+
+        <script>
+            let urlParams = new URLSearchParams(window.location.search);
+            let nim = urlParams.get("nim");
+            let nama = urlParams.get("nama");
+            let semester = urlParams.get("smt");
+            let Floor = urlParams.get("lantai");
+            let Room = [urlParams.get("room")];
+            const RoomArray = Room.join(",").split(",");
+
+            class Semester {
+                constructor(semester) {
+                    this.semester = semester;
+                }
+
+                convertToYear() {
+                    const currentYear = new Date().getFullYear();
+                    const year = currentYear - Math.ceil(this.semester / 2);
+                    return year;
+                }
+            }
+
+            var tahun = new Semester(semester);
+            tahun = tahun.convertToYear();
+
+            var nimRes = document.getElementById('nim');
+            var namaRes = document.getElementById('nama');
+            var lantaiRes = document.getElementById('lantai');
+            var smtRes = document.getElementById('tahun');
+            var roomList = document.getElementById('room');
+
+            nimText.innerHTML = `Nim: <b>${nim}</b>`;
+            namaText.innerHTML = `Nama: <b>${nama}</b>`;
+            prodiText.innerHTML = `Lab: <b>${prodi}</b>`;
+            semesterText.innerHTML = `Tahun Masuk: <b>${tahunMasuk}</b>`;
+
+            Room.forEach(element => {
+                var newListItem = document.createElement('li');
+                newListItem.textContent = element;
+
+                roomList.appendChild(newListItem);
+            });
+
+        </script>
+    </body>
+</html>
