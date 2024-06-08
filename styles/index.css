@@ -1,0 +1,113 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+header{
+    height: 60px;
+    background-color: #01015c;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+a:hover{
+    color: aliceblue;
+    text-decoration: underline;
+}
+
+a:link, a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+main{
+    margin: auto 300px;
+}
+
+.head-title{
+    color: #00bfff;
+}
+
+.welcome{
+    font-size: 60px;
+    font-weight: 700;
+    color: #00006a;
+}
+
+.desc{
+    color: grey;
+    margin: 20 0 45 0;
+    font-size: large;
+}
+
+.btn-pinjam{
+    background-color: #2727de;
+    height: 50px;
+    color: white;
+    font-size: medium;
+    border: 0;
+    border-radius: 10px;
+    padding: 0 20;
+}
+
+.btn-pinjam:hover {
+    background-color: #2727deb7;
+    cursor: pointer;
+}
+
+.btn-daftar{
+    background-color: #ffffff00;
+    height: 50px;
+    font-size: medium;
+    border: 1 solid;
+    border-radius: 10px;
+    padding: 0 20;
+}
+
+.btn-daftar:hover {
+    background-color: #ffffff33;
+    cursor: pointer;
+}
+
+/* modal */
+.popup{
+    background-color: rgba(45, 45, 45, 0.222);
+    display: none;
+    position: fixed;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    background-color:aliceblue;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+}
+
+.content h3 {
+    font-size: 27px;
+}
+
+.content h4, table {
+    color: grey;
+}
+
+.btn-pop-close {
+    justify-content: center;
+    float: right;
+    color: #a9a9a9;
+    font-weight: bold;
+}
+
+.btn-pop-close:hover{
+    text-decoration: none;
+    font-weight: bolder;
+    color: #8d8c8c;
+    cursor: pointer;
+}

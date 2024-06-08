@@ -1,0 +1,100 @@
+<!--
+    Aqilah Qathrunnada Mumtaz
+    2210511155
+-->
+
+<html>
+    <head>
+        <title>Registration</title>
+        <link rel="stylesheet" href="styles/form.css">
+        <link rel="icon" href="assets/LOGO UPNVJ.png" type="image/x-icon">
+    </head>
+
+    <body>
+        <div class="main">
+            <h2 class="header">FORM PENGISIAN PEMINATAN KEAHLIAN FAKULTAS ILMU KOMPUTER UPN VETERAN JAKARTA<br>
+                <img src="assets/LOGO UPNVJ.png" width="50px" height="50px">
+            </h2>
+
+            <form>
+                <div class="form">
+                    <input type="text" id="nim" class="bio" placeholder="NIM Mahasiswa" required><br>
+                    <input type="text" id="nama" class="bio" placeholder="Nama Mahasiswa" required><br>
+                    <input type="text" id="semester" class="bio" placeholder="Semester Mahasiswa" required><br>
+
+                    <div class="under">
+                        <select id="lantai" name="lantai" required onclick="pilihan()">
+                            <option disabled selected>Pilih Lantai</option>
+                            <option value="lt2">Lantai 2</option>
+                            <option value="lt3">Lantai 3</option>
+                            <option value="lt4">Lantai 4</option>
+                        </select>
+                        <fieldset id="TAG2" style="display: none;">
+                            <legend>Lab Fakultas Ilmu Komputer Lantai 2</legend>
+                            <table>
+                                <tr>
+                                    <td><label for="fl201">FIK-LAB 201</label></td>
+                                    <td><input type="checkbox" name="fl201" id="r2"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="fl202">FIK-LAB 202</label></td>
+                                    <td><input type="checkbox" name="fl202 id="r2"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="fl203">FIK-LAB 203</label></td>
+                                    <td><input type="checkbox" name="fl203" id="r2"></td>
+                                </tr>
+                            </table>
+                        </fieldset>
+
+                        <fieldset id="TAG3" style="display: none;">
+                            <legend>Lab Fakultas Ilmu Komputer Lantai 3</legend>
+                            <table>
+                                <tr>
+                                    <td><label for="fl301">FIK-LAB 301</label></td>
+                                    <td><input type="checkbox" name="fl301" id="r3"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="fl302">FIK-LAB 302</label></td>
+                                    <td><input type="checkbox" name="fl302" id="r3"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="fl303">FIK-LAB 303</label></td>
+                                    <td><input type="checkbox" name="fl303" id="r3"></td>
+                                </tr>
+                            </table>
+                        </fieldset>
+
+                        <fieldset id="TAG4" style="display: none;">
+                            <legend>Lab Fakultas Ilmu Komputer Lantai 4</legend>
+                            <table>
+                                <tr>
+                                    <td><label for="fl401">FIK-LAB 401</label></td>
+                                    <td><input type="checkbox" name="fl401" id="r4"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="fl402">FIK-LAB 402</label></td>
+                                    <td><input type="checkbox" name="fl402" id="r4"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="fl403">FIK-LAB 403</label></td>
+                                    <td><input type="checkbox" name="fl403" id="r4"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="fl403">FIK-LAB 404</label></td>
+                                    <td><input type="checkbox" name="fl403" id="r4"></td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                        
+                        <br>
+                        <input class="btn" type="button" value="Submit" onclick="hasil();"> <br>
+                        <button class="btn" onclick="window.location.href='index.html'">Kembali ke Home</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <script src="js/js-form.js"></script>
+    </body>
+</html>
